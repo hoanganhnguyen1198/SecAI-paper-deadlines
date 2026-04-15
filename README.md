@@ -9,3 +9,9 @@ Anyway, those resources are:
 - https://mpc-deadlines.github.io/
 - https://sec-deadlines.github.io/
 - http://aideadlines.org/?sub=ML,CV,NLP,RO,SP,DM,AP,KR,HCI,IRSM,MISC
+
+To open the website, run following the command at the root directory of the repo:
+```
+python3 -m http.server 8000 
+```
+The website can be viewed at ```http://localhost:8000/web```.

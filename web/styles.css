@@ -172,8 +172,8 @@ body {
 
 .conference-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.1rem;
 }
 
 .card {
@@ -181,7 +181,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 14px;
   box-shadow: var(--card-shadow);
-  padding: 0.95rem;
+  padding: 1.2rem;
   animation: fadeInUp 0.35s ease both;
 }
 
@@ -214,6 +214,14 @@ body {
   color: #435059;
   font-size: 0.9rem;
   line-height: 1.35;
+}
+
+.conference-place {
+  margin: 0.45rem 0 0;
+  color: #57656d;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  font-weight: 600;
 }
 
 .conference-link {

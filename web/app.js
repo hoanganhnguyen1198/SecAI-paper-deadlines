@@ -371,6 +371,15 @@ function hasFinalDeadlinePassedToday(conference, nowMs) {
 function compareConferences(a, b, sortBy, sortOrder, nowMs) {
   const direction = sortOrder === 'desc' ? -1 : 1;
 
+  if (sortBy === 'name') {
+    const left = String(a.name || '').toLowerCase();
+    const right = String(b.name || '').toLowerCase();
+    const result = left.localeCompare(right);
+    if (result !== 0) {
+      return result * direction;
+    }
+  }
+
   if (sortBy === 'year') {
     const left = Number(a.year) || 0;
     const right = Number(b.year) || 0;
@@ -499,6 +508,11 @@ function renderConferenceCards(items) {
     description.className = 'conference-description';
     description.textContent = conference.description || 'No description available.';
     card.appendChild(description);
+
+    const place = document.createElement('p');
+    place.className = 'conference-place';
+    place.textContent = `Place: ${conference.place || 'N/A'}`;
+    card.appendChild(place);
 
     if (conference.link) {
       const link = document.createElement('a');
